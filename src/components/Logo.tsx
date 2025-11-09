@@ -1,10 +1,8 @@
+import logoImage from "@/assets/Localbird-Logo.png";
+
 const Logo = () => {
   return <div className="flex items-center gap-2">
-      <div className="text-2xl font-bold">
-        <span className="text-primary">L</span>
-        <span className="text-foreground">ocalbird</span>
-      </div>
-      
+      <img src={logoImage} alt="Localbird" className="h-8 md:h-10" />
     </div>;
 };
 export default Logo;

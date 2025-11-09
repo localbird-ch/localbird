@@ -28,19 +28,19 @@ const MapMockup = () => {
           
           <div className="space-y-2.5 mb-5">
             {/* Fitness */}
-            <button onClick={() => setFilters(prev => ({ ...prev, fitness: !prev.fitness }))} className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full shadow-md transition-all hover:shadow-lg ${filters.fitness ? 'bg-primary text-primary-foreground' : 'bg-background border-2 border-secondary text-secondary'}`}>
+            <button onClick={() => setFilters(prev => ({ ...prev, fitness: !prev.fitness }))} className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg border-2 ${filters.fitness ? 'bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20' : 'bg-background border-secondary text-secondary shadow-md'}`}>
               <Dumbbell className="h-4 w-4" />
               <span className="font-medium text-sm">Fitness</span>
             </button>
 
             {/* Groceries */}
-            <button onClick={() => setFilters(prev => ({ ...prev, groceries: !prev.groceries }))} className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full shadow-md transition-all hover:shadow-lg ${filters.groceries ? 'bg-primary text-primary-foreground' : 'bg-background border-2 border-secondary text-secondary'}`}>
+            <button onClick={() => setFilters(prev => ({ ...prev, groceries: !prev.groceries }))} className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg border-2 ${filters.groceries ? 'bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20' : 'bg-background border-secondary text-secondary shadow-md'}`}>
               <ShoppingCart className="h-4 w-4" />
               <span className="font-medium text-sm">Groceries</span>
             </button>
 
             {/* Schools */}
-            <button onClick={() => setFilters(prev => ({ ...prev, schools: !prev.schools }))} className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full shadow-md transition-all hover:shadow-lg ${filters.schools ? 'bg-primary text-primary-foreground' : 'bg-background border-2 border-secondary text-secondary'}`}>
+            <button onClick={() => setFilters(prev => ({ ...prev, schools: !prev.schools }))} className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg border-2 ${filters.schools ? 'bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20' : 'bg-background border-secondary text-secondary shadow-md'}`}>
               <GraduationCap className="h-4 w-4" />
               <span className="font-medium text-sm">Schools</span>
             </button>
