@@ -137,7 +137,7 @@ const Hero = () => {
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-border/40 text-center">
             <p className="text-xs text-muted-foreground">
-              © 2025 Localbird. Built with ❤️ in Switzerland.
+              © {new Date().getFullYear()} Localbird. Built with ❤️ in Switzerland.
             </p>
           </div>
         </div>
