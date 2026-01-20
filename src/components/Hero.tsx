@@ -28,19 +28,37 @@ const Hero = () => {
           <p className="text-sm font-semibold tracking-wider uppercase" style={{ color: '#cc1a30' }}>🇨🇭 For Renters</p>
           
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight" style={{ color: '#2b384d' }}>Local insights before you sign.</h1>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight" style={{ color: '#2b384d' }}>Discover the neighborhood before you rent.</h1>
 
           {/* Subheadline */}
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed md:text-xl pt-2">Enter a listing address and instantly see your commute, nearby essentials and how good the neighborhood is — all in one place.</p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed md:text-xl pt-2">Read what residents know about the area and verify commute, safety and essentials.</p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-6">
-          <Button size="lg" className="w-full sm:w-auto shadow-lg" onClick={() => window.open('https://hoods.localbird.ch', '_blank')}>Open the map<ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button size="lg" variant="outline" className="w-full sm:w-auto hover:bg-primary/10 hover:border-primary/50 hover:shadow-md transition-all" onClick={() => window.location.href = 'mailto:localbirdch@gmail.com?subject=Localbird Early Access&body=Hi there,%0A%0AI\'m interested in getting early access to Localbird.%0A%0ABest regards,%0A[Your Name]'}>
-            Get early access
-          </Button>
-        </div>
+          {/* Primary CTA */}
+          <div className="flex flex-col items-center justify-center gap-3 pt-6">
+            <Button size="lg" className="w-full sm:w-auto shadow-lg text-base px-8 py-6" style={{ backgroundColor: '#cc1a30' }} onClick={() => window.open('https://hoods.localbird.ch', '_blank')}>
+              Explore neighborhood insights
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <a 
+              href="mailto:localbirdch@gmail.com?subject=Localbird Early Access&body=Hi there,%0A%0AI'm interested in getting early access to Localbird.%0A%0ABest regards,%0A[Your Name]"
+              className="text-sm text-muted-foreground hover:text-primary underline-offset-4 hover:underline transition-all"
+            >
+              Get early access
+            </a>
+          </div>
+
+          {/* Trust Signals - Right below CTA */}
+          <div className="pt-12 pb-8">
+            <p className="text-sm text-muted-foreground mb-6 flex items-center justify-center gap-2">
+              <CheckCircle2 className="h-4 w-4" style={{ color: '#639fab' }} />
+              <span>Trusted neighborhood insights from locals 🇨🇭</span>
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
+              <img src={swissGovLogo} alt="Swiss Federal Statistical Office" className="h-8 md:h-10 grayscale" />
+              <img src={googleMapsLogo} alt="Google Maps" className="h-8 md:h-10" />
+              <img src={outvisitLogo} alt="Outvisit" className="h-7 md:h-9" />
+            </div>
+          </div>
 
           {/* Hero Visual - Map Mockup */}
           <div className="pt-20 md:pt-24">
@@ -51,17 +69,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Trust Badges Section */}
-      <div className="py-16 px-4 bg-muted/20">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-center text-sm font-medium text-muted-foreground mb-8 tracking-wide">Powered by trusted data sources & partners</p>
-          <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
-            <img src={swissGovLogo} alt="Swiss Federal Statistical Office" className="h-10 md:h-12 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" />
-            <img src={googleMapsLogo} alt="Google Maps" className="h-10 md:h-12 opacity-60 hover:opacity-100 transition-opacity" />
-            <img src={outvisitLogo} alt="Outvisit" className="h-9 md:h-10 opacity-60 hover:opacity-100 transition-opacity" />
-          </div>
-        </div>
-      </div>
 
       {/* How It Works Section */}
       <div className="py-20 md:py-28 px-4">
