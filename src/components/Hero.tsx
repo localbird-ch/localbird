@@ -123,6 +123,7 @@ const Hero = () => {
               <ul className="space-y-2 text-sm">
                 <li><a href="https://hoods.localbird.ch" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Open Map</a></li>
                 <li><a href="mailto:localbirdch@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">Contact Us</a></li>
+                <li><a href="https://hoods.localbird.ch/privacy" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
 
