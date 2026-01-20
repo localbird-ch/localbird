@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig({
   base: '/', // For custom domain (localbird.ch)
   server: {
-    host: "::",
+    host: "localhost",
     port: 8080,
   },
   plugins: [react()],
