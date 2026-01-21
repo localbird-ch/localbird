@@ -35,23 +35,35 @@ const Hero = () => {
 
           {/* Primary CTA */}
           <div className="flex flex-col items-center justify-center gap-3 pt-6">
-            <Button size="lg" className="w-full sm:w-auto shadow-lg text-base px-8 py-6" style={{ backgroundColor: '#cc1a30' }} onClick={() => window.open('https://hoods.localbird.ch', '_blank')}>
-              Explore neighborhood insights
+            <Button 
+              size="lg" 
+              className="w-full sm:w-auto shadow-lg text-base px-8 py-6" 
+              style={{ backgroundColor: '#cc1a30' }} 
+              onClick={() => window.open('https://localbird.fillout.com/early-access', '_blank')}
+            >
+              Get free early access
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <a 
-              href="mailto:localbirdch@gmail.com?subject=Localbird Early Access&body=Hi there,%0A%0AI'm interested in getting early access to Localbird.%0A%0ABest regards,%0A[Your Name]"
-              className="text-sm text-muted-foreground hover:text-primary underline-offset-4 hover:underline transition-all"
-            >
-              Get early access
-            </a>
+            <div className="flex flex-col items-center gap-0.5">
+              <Button 
+                variant="ghost" 
+                size="lg" 
+                className="w-full sm:w-auto text-base px-8 py-3 hover:bg-transparent hover:text-foreground"
+                onClick={() => window.open('https://hoods.localbird.ch', '_blank')}
+              >
+                Explore the Early Beta
+              </Button>
+              <p className="text-xs text-muted-foreground">
+                Early version · Features in progress
+              </p>
+            </div>
           </div>
 
           {/* Trust Signals - Right below CTA */}
           <div className="pt-12 pb-8">
             <p className="text-sm text-muted-foreground mb-6 flex items-center justify-center gap-2">
               <CheckCircle2 className="h-4 w-4" style={{ color: '#639fab' }} />
-              <span>Trusted neighborhood insights from locals 🇨🇭</span>
+              <span>Trusted neighborhood insights from locals</span>
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
               <img src={swissGovLogo} alt="Swiss Federal Statistical Office" className="h-8 md:h-10 grayscale" />

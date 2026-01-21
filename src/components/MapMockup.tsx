@@ -41,20 +41,20 @@ const MapMockup = () => {
         </div>
 
         {/* Category Ratings */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5 md:gap-2">
           {categories.map((cat) => {
             const Icon = cat.icon;
             return (
-              <div key={cat.id} className="group bg-gradient-to-br from-card to-muted/10 border border-border/50 rounded-2xl p-3 md:p-3.5 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-200 aspect-square flex flex-col items-center justify-center text-center">
-                <div className="bg-primary/10 rounded-xl p-2 mb-2 group-hover:bg-primary/15 transition-colors">
-                  <Icon className="h-4 w-4 md:h-4 w-4 text-primary" />
+              <div key={cat.id} className="group bg-gradient-to-br from-card to-muted/10 border border-border/50 rounded-xl p-2 hover:border-primary/40 hover:shadow-md hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-200 aspect-square flex flex-col items-center justify-center text-center">
+                <div className="rounded-xl p-2.5 mb-2 group-hover:opacity-90 transition-all" style={{ backgroundColor: '#2b384d' }}>
+                  <Icon className="h-4 w-4 text-white" />
                 </div>
-                <span className="text-[10px] md:text-[11px] font-semibold text-foreground mb-1 leading-tight px-1">{cat.label}</span>
+                <span className="text-[9px] font-semibold text-foreground mb-1 leading-tight px-0.5 line-clamp-1">{cat.label}</span>
                 <div className="flex items-baseline gap-0.5 mb-0.5">
-                  <span className="text-xl md:text-2xl font-bold text-foreground">{cat.rating}</span>
-                  <span className="text-[10px] text-muted-foreground">/10</span>
+                  <span className="text-base font-bold text-foreground">{cat.rating}</span>
+                  <span className="text-[8px] text-muted-foreground">/10</span>
                 </div>
-                <p className="text-[9px] md:text-[10px] text-muted-foreground/70 leading-tight px-0.5">{cat.description}</p>
+                <p className="text-[8px] text-muted-foreground/70 leading-tight px-0.5 line-clamp-2">{cat.description}</p>
               </div>
             );
           })}
@@ -88,8 +88,8 @@ const MapMockup = () => {
 
         {/* CTA Button at Bottom */}
         <div className="flex flex-col items-center gap-3 pt-6">
-          <Button size="lg" className="w-full sm:w-auto whitespace-nowrap rounded-full" onClick={() => window.open('https://hoods.localbird.ch', '_blank')}>
-            Explore neighborhoods
+          <Button size="lg" className="w-full sm:w-auto whitespace-nowrap rounded-full" onClick={() => window.open('https://localbird.fillout.com/early-access', '_blank')}>
+            Explore the Early Beta
           </Button>
           <p className="text-xs text-muted-foreground text-center">See ratings and reviews from locals in your search area.</p>
         </div>
